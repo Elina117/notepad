@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -200,6 +201,40 @@ namespace notepad_2_
             SaveUnsavedFile();
             Close();
 
+        }
+
+        private void печатьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrintDocument pDocument = new PrintDocument();
+            pDocument.PrintPage += PrintPageH;
+            PrintDialog pDialog = new PrintDialog();
+            pDialog.Document = pDocument;
+            if(pDialog.ShowDialog() == DialogResult.OK)
+            {
+                pDialog.Document.Print();
+            }
+        }
+
+        public void PrintPageH(object sender, PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString(textBox1.Text, textBox1.Font, Brushes.Black, 0, 0);
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Это программа была создана в учебных целях. Любой может ее использовать. Это абсолютно бесплатно.", "О блокноте", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void светлаяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBox1.ForeColor = Color.Black;
+            textBox1.BackColor = Color.White;
+        }
+
+        private void темнаяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBox1.ForeColor = Color.White;
+            textBox1.BackColor = Color.DimGray;
         }
     }
 

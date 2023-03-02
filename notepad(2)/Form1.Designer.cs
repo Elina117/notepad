@@ -40,9 +40,15 @@
             this.вставитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.форматToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.шрифтToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.печатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.темыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.светлаяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.темнаяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +59,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
             this.правкаToolStripMenuItem,
-            this.форматToolStripMenuItem});
+            this.форматToolStripMenuItem,
+            this.справкаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(842, 42);
@@ -66,7 +73,8 @@
             this.создатьToolStripMenuItem,
             this.открытьToolStripMenuItem,
             this.сохранитьToolStripMenuItem,
-            this.выходToolStripMenuItem});
+            this.выходToolStripMenuItem,
+            this.печатьToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(90, 38);
             this.файлToolStripMenuItem.Text = "Файл";
@@ -133,7 +141,8 @@
             // форматToolStripMenuItem
             // 
             this.форматToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.шрифтToolStripMenuItem});
+            this.шрифтToolStripMenuItem,
+            this.темыToolStripMenuItem});
             this.форматToolStripMenuItem.Name = "форматToolStripMenuItem";
             this.форматToolStripMenuItem.Size = new System.Drawing.Size(118, 38);
             this.форматToolStripMenuItem.Text = "Формат";
@@ -144,6 +153,14 @@
             this.шрифтToolStripMenuItem.Size = new System.Drawing.Size(239, 44);
             this.шрифтToolStripMenuItem.Text = "Шрифт...";
             this.шрифтToolStripMenuItem.Click += new System.EventHandler(this.OnFont);
+            // 
+            // справкаToolStripMenuItem
+            // 
+            this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.оПрограммеToolStripMenuItem});
+            this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
+            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(126, 38);
+            this.справкаToolStripMenuItem.Text = "Справка";
             // 
             // textBox1
             // 
@@ -158,6 +175,43 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // печатьToolStripMenuItem
+            // 
+            this.печатьToolStripMenuItem.Name = "печатьToolStripMenuItem";
+            this.печатьToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.печатьToolStripMenuItem.Text = "Печать";
+            this.печатьToolStripMenuItem.Click += new System.EventHandler(this.печатьToolStripMenuItem_Click);
+            // 
+            // оПрограммеToolStripMenuItem
+            // 
+            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.оПрограммеToolStripMenuItem.Text = "О программе...";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
+            // 
+            // темыToolStripMenuItem
+            // 
+            this.темыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.светлаяToolStripMenuItem,
+            this.темнаяToolStripMenuItem});
+            this.темыToolStripMenuItem.Name = "темыToolStripMenuItem";
+            this.темыToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.темыToolStripMenuItem.Text = "Темы";
+            // 
+            // светлаяToolStripMenuItem
+            // 
+            this.светлаяToolStripMenuItem.Name = "светлаяToolStripMenuItem";
+            this.светлаяToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.светлаяToolStripMenuItem.Text = "Светлая";
+            this.светлаяToolStripMenuItem.Click += new System.EventHandler(this.светлаяToolStripMenuItem_Click);
+            // 
+            // темнаяToolStripMenuItem
+            // 
+            this.темнаяToolStripMenuItem.Name = "темнаяToolStripMenuItem";
+            this.темнаяToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.темнаяToolStripMenuItem.Text = "Темная";
+            this.темнаяToolStripMenuItem.Click += new System.EventHandler(this.темнаяToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -196,6 +250,12 @@
         private System.Windows.Forms.ToolStripMenuItem вставитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem форматToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem шрифтToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem печатьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem темыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem светлаяToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem темнаяToolStripMenuItem;
     }
 }
 
